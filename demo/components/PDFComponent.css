@@ -1,0 +1,52 @@
+/* src/ImageHoverCanvas.css */
+.canvas-container {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 20px;
+    width: 400px; /* Container width */
+    height: 300px; /* Container height */
+  }
+  
+  canvas {
+    display: block;
+    border: 2px solid #ccc;
+  }
+  
+  .draggable-image {
+    position: relative;
+    cursor: move;
+    transition: transform 0.2s ease;
+  }
+  
+  .draggable-image:hover {
+    transform: scale(1.05); /* Scale the image on hover for a subtle effect */
+  }
+  
+  /* Custom resizable handle styles */
+  .react-resizable {
+    position: relative;
+  }
+  
+  .react-resizable-handle {
+    position: absolute;
+    width: 20px; /* Increase handle size for better visibility */
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    background-color: #4e73df; /* Handle color */
+    cursor: se-resize;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* Ensure handle is above other elements */
+  }
+  
+  /* Add additional styles for visibility */
+  .react-resizable-handle::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
